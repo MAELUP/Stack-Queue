@@ -31,13 +31,7 @@ public class ArrayListQueueStack<Obj> implements Stack<Obj>, Queue<Obj> {
             System.out.println("please add item");
         } else {
             item.remove(item.size() - 1);
-            ArrayList<Obj> itemNew = new ArrayList<Obj>();
-            for (int i = 0; i < item.size(); i++) {
-                if (item.get(i) != null) {
-                    itemNew.add(item.get(i));
-                }
-            }
-            this.item = itemNew;
+            this.item = newArrayList();
         }
 
     }
@@ -54,13 +48,7 @@ public class ArrayListQueueStack<Obj> implements Stack<Obj>, Queue<Obj> {
             System.out.println("please add item");
         } else {
             item.remove(0);
-            ArrayList<Obj> itemNew = new ArrayList<Obj>();
-            for (int i = 0; i < item.size(); i++) {
-                if (item.get(i) != null) {
-                    itemNew.add(item.get(i));
-                }
-            }
-            this.item = itemNew;
+            this.item = newArrayList();
         }
     }
 
@@ -68,5 +56,13 @@ public class ArrayListQueueStack<Obj> implements Stack<Obj>, Queue<Obj> {
     public String toString() {
         return "ArrayListQueueStack{" + "item=" + item + '}';
     }
-
+public ArrayList<Obj> newArrayList() {
+        ArrayList<Obj> itemNew = new ArrayList<Obj>();
+        for (int i = 0; i < item.size(); i++) {
+            if (item.get(i) != null) {
+                itemNew.add(item.get(i));
+            }
+        }
+        return itemNew;
+    }
 }
