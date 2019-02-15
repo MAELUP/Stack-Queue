@@ -56,7 +56,8 @@ public class ArrayListQueueStack<Obj> implements Stack<Obj>, Queue<Obj> {
     public String toString() {
         return "ArrayListQueueStack{" + "item=" + item + '}';
     }
-public ArrayList<Obj> newArrayList() {
+    
+    public ArrayList<Obj> newArrayList() {
         ArrayList<Obj> itemNew = new ArrayList<Obj>();
         for (int i = 0; i < item.size(); i++) {
             if (item.get(i) != null) {
