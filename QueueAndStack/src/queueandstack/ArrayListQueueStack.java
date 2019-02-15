@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 public class ArrayListQueueStack<Obj> implements Stack<Obj>, Queue<Obj> {
 
-    private ArrayList<Obj> item;
+    private List<Obj> item;
 
     public ArrayListQueueStack() {
         item = new ArrayList<Obj>();
